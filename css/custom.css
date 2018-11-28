@@ -1,7 +1,19 @@
-#main_container{
-    height: 100%;
+@media screen and (max-width: 600px) {
+    .card {
+        margin: 5vh;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 2vh;
+    }
+    .card:first-child {
+        margin-top: 4vh;
+    }
 }
-.jumbotron{
-    height: 100%;
-    background-color: red;
+
+.card-group {
+    float: none;
+    margin: 0 auto;
+}
+.plasma-balances {
+    margin-top: 10vh;
 }
