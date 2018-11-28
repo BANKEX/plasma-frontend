@@ -6,15 +6,29 @@ function deposit(privateKey, amount) {
 }
 
 /*
-    Should get user private key from frontend
- */
-function getPrivateKey() {
-    
-}
-
-/*
     Should get deposit amount
  */
 function getAmount() {
 
+}
+
+async function getSmartContractBalance() {
+    const response = await fetch(`${endpontUrl}/etherBalance`);
+    if (response.ok === false)
+        throw new Error("Can not get smart contract balance");
+    return (await response.json()).Balance;
+}
+
+async function getPlasmaBalance() {
+    const response = await fetch(`${endpontUrl}/plasmaBalance`);
+    if (response.ok === false)
+        throw new Error("Can not get plasma balance");
+    return (await response.json()).Balance;
+}
+
+async function getContractAddress() {
+    const response = await fetch(`${endpontUrl}/contractAddress`);
+    if (response.ok === false)
+        throw new Error("Can not get plasma balance");
+    return (await response.json()).Address;
 }
