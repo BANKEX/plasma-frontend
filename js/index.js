@@ -29,6 +29,6 @@ async function getPlasmaBalance() {
 async function getContractAddress() {
     const response = await fetch(`${endpointUrl}/contractAddress`);
     if (response.ok === false)
-        throw new Error("Can not get plasma balance");
+        throw new Error("Can not get plasma contract address");
     return (await response.json()).Address;
 }
