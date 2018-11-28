@@ -13,21 +13,21 @@ function getAmount() {
 }
 
 async function getSmartContractBalance() {
-    const response = await fetch(`${endpontUrl}/etherBalance`);
+    const response = await fetch(`${endpointUrl}/etherBalance`);
     if (response.ok === false)
         throw new Error("Can not get smart contract balance");
     return (await response.json()).Balance;
 }
 
 async function getPlasmaBalance() {
-    const response = await fetch(`${endpontUrl}/plasmaBalance`);
+    const response = await fetch(`${endpointUrl}/plasmaBalance`);
     if (response.ok === false)
         throw new Error("Can not get plasma balance");
     return (await response.json()).Balance;
 }
 
 async function getContractAddress() {
-    const response = await fetch(`${endpontUrl}/contractAddress`);
+    const response = await fetch(`${endpointUrl}/contractAddress`);
     if (response.ok === false)
         throw new Error("Can not get plasma balance");
     return (await response.json()).Address;

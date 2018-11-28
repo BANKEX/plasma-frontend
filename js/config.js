@@ -1,1 +1,1 @@
-const endpontUrl = "http://localhost:2000";
+const endpointUrl = "http://localhost:2000";
